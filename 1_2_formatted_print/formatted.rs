@@ -5,8 +5,8 @@ struct Structure {
 }
 
 impl fmt::Display for Structure {
-    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
-        write!(f, "{}", self.value); 
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> Result <(), fmt::Error> {
+        write!(f, "{}", self.value)
     }
 }
 
@@ -28,5 +28,5 @@ fn main() {
     #[allow(dead_code)]
     let s = Structure {value: 3};
 
-    println!("This struct `{}` won't print...", s.value);
+    println!("This struct `{}` won't print...", s);
 }
