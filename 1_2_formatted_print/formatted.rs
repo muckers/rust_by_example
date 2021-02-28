@@ -1,4 +1,5 @@
 use std::fmt;
+use std::f32::consts;
 
 struct Structure {
     value: i32
@@ -29,4 +30,6 @@ fn main() {
     let s = Structure {value: 3};
 
     println!("This struct `{}` won't print...", s);
+
+    println!("Pi is roughly {0:.6}", consts::PI);
 }
